@@ -47,7 +47,14 @@ android {
     }
 }
 
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
 dependencies {
     implementation 'androidx.annotation:annotation:1.5.0'
-    implementation 'com.arthenica:ffmpeg-kit-https:6.0-2'
+    // implementation 'com.arthenica:ffmpeg-kit-https:6.0-2'
+    implementation fileTree(dir: 'libs', include: ['**/*.aar'])
 }
